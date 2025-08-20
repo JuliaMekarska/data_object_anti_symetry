@@ -16,5 +16,9 @@ public class Geometry {
         System.out.println("Area of circle is " + circle.circleArea);
         System.out.println("Area of rectangle is " + rectangle.rectangleArea);
         System.out.println("Area of square is " + square.squareArea);
+
+        System.out.println("Perimeter of circle is " + circle.perimeter);
+        System.out.println("Perimeter of rectangle is " + rectangle.perimeter);
+        System.out.println("Perimeter of square is " + square.perimeter);
     }
 }

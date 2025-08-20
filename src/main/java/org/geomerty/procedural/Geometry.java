@@ -22,6 +22,20 @@ public class Geometry {
         throw new NoSuchShapeException();
     }
 
+    public static double perimeter(Object shape) throws NoSuchShapeException {
+        if (shape instanceof Square) {
+            Square s = (Square) shape;
+            return 4 * s.side;
+        } else if (shape instanceof Rectangle) {
+            Rectangle r = (Rectangle) shape;
+            return 2 * (r.height + r.width);
+        } else if (shape instanceof Circle) {
+            Circle c = (Circle) shape;
+            return 2 * PI * c.radius;
+        }
+        throw new NoSuchShapeException();
+    }
+
     public static void main(String[] args) throws NoSuchShapeException {
         Square square = new Square();
         Point squareTopLeftPoint = new Point();
@@ -30,6 +44,7 @@ public class Geometry {
         square.topLeft = squareTopLeftPoint;
         square.side = 3.0;
         System.out.println("Area of square is " + area(square));
+        System.out.println("Perimeter of square is " + perimeter(square));
 
         Rectangle rectangle = new Rectangle();
         Point rectangleTopLeftPoint = new Point();
@@ -39,6 +54,7 @@ public class Geometry {
         rectangle.height = 4.0;
         rectangle.width = 5.0;
         System.out.println("Area of rectangle is " + area(rectangle));
+        System.out.println("Perimeter of rectangle is " + perimeter(rectangle));
 
         Circle circle = new Circle();
         Point circleCenter = new Point();
@@ -47,5 +63,6 @@ public class Geometry {
         circle.center = circleCenter;
         circle.radius = 6.3;
         System.out.println("Area of circle is " + area(circle));
+        System.out.println("Perimeter of circle is " + perimeter(circle));
     }
 }

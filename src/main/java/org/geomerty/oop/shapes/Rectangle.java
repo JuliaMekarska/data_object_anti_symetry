@@ -7,12 +7,14 @@ public class Rectangle {
     public double height;
     public double width;
     public double rectangleArea;
+    public double perimeter;
 
     public Rectangle(Point topLeft, double height, double width) {
         this.topLeft = topLeft;
         this.height = height;
         this.width = width;
-        this.rectangleArea = (height * width)/2;;
+        this.rectangleArea = (height * width);
+        this.perimeter = 2 * (height+ width);
     }
 
 }
